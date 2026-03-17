@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to My Blog"
-date: 2026-03-17
+date: 2026-03-16
 tags: [engineering]
 excerpt: "A first post to kick things off — why I started this blog, what I'll be writing about, and what you can expect."
 ---
