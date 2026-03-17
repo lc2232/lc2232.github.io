@@ -1,0 +1,47 @@
+title: Luke Cummins
+email: your-email@example.com
+description: >-
+  Software engineer. Builder of things. Writer of words.
+  My personal corner of the internet for projects, thoughts, and ideas.
+baseurl: ""
+url: "https://lc2232.github.io"
+
+author:
+  name: Luke Cummins
+  github: lc2232
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle

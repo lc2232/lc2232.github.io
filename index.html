@@ -1,0 +1,124 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Available for opportunities
+    </div>
+    <h1 class="hero-title">
+      Hi, I'm <span class="gradient-text">Luke Cummins</span>
+    </h1>
+    <p class="hero-subtitle">
+      Software engineer with a background in firmware and a passion for distributed systems,
+      backend architecture, and building products that scale.
+    </p>
+    <div class="hero-actions">
+      <a href="{{ '/projects' | relative_url }}" class="btn btn-primary">View My Work</a>
+      <a href="{{ '/about' | relative_url }}" class="btn btn-secondary">About Me</a>
+    </div>
+    <div class="hero-tech">
+      <span class="tech-tag">C</span>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">IoT Protocols</span>
+      <span class="tech-tag">Real-time operating systems</span>
+      <span class="tech-tag">Docker</span>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="code-card terminal-card">
+      <div class="code-card-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="code-filename">~ zsh</span>
+      </div>
+      <div class="code-body terminal-body">
+        <p class="term-line"><span class="term-prompt">❯</span> <span class="term-cmd">whoami</span></p>
+        <p class="term-output term-highlight">luke cummins</p>
+
+        <p class="term-line"><span class="term-prompt">❯</span> <span class="term-cmd">cat about.json</span></p>
+        <pre class="term-json">{
+  <span class="kw">"role"</span>:     <span class="st">"Software Engineer"</span>,
+  <span class="kw">"based"</span>:    <span class="st">"United Kingdom 🇬🇧"</span>,
+  <span class="kw">"focus"</span>: [
+    <span class="st">"Firmware Engineering"</span>,
+    <span class="st">"Backend Engineering"</span>,
+    <span class="st">"Cloud Infrastructure"</span>
+  ],
+  <span class="kw">"languages"</span>: [<span class="st">"C"</span>, <span class="st">"Python"</span>],
+  <span class="kw">"open_to"</span>:  <span class="st">"opportunities"</span>
+}</pre>
+        <p class="term-line"><span class="term-prompt">❯</span> <span class="term-cursor">█</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects -->
+<section class="section" id="projects">
+  <div class="section-header">
+    <h2 class="section-title">Featured Projects</h2>
+    <a href="{{ '/projects' | relative_url }}" class="section-link">View all →</a>
+  </div>
+  <div class="card-grid">
+    <article class="project-card">
+      <div class="project-card-header">
+        <span class="project-icon">🌐</span>
+        <div class="project-links">
+          <a href="https://github.com/lc2232/lc2232.github.io" target="_blank" rel="noopener" aria-label="Source code">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <h3 class="project-title">This Website</h3>
+      <p class="project-desc">My personal portfolio and blog, built with Jekyll and hosted on GitHub Pages with a custom
+        premium design and dark mode.</p>
+      <div class="project-tags">
+        <span class="tag">Jekyll</span>
+        <span class="tag">SCSS</span>
+        <span class="tag">GitHub Pages</span>
+      </div>
+    </article>
+
+    <article class="project-card project-card-cta">
+      <a href="{{ '/projects' | relative_url }}" class="project-cta-link">
+        <span class="cta-icon">→</span>
+        <span>See all projects</span>
+      </a>
+    </article>
+  </div>
+</section>
+
+<!-- Recent Blog Posts -->
+<section class="section" id="blog">
+  <div class="section-header">
+    <h2 class="section-title">Recent Posts</h2>
+    <a href="{{ '/blog' | relative_url }}" class="section-link">View all →</a>
+  </div>
+  <div class="post-list">
+    {% for post in site.posts limit:3 %}
+    <article class="post-preview">
+      <div class="post-preview-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        {% if post.tags.size > 0 %}
+        <span class="post-preview-tag">{{ post.tags.first }}</span>
+        {% endif %}
+      </div>
+      <h3 class="post-preview-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h3>
+      <p class="post-preview-excerpt">{{ post.excerpt | strip_html | truncate: 130 }}</p>
+    </article>
+    {% else %}
+    <p class="empty-state">No posts yet — check back soon!</p>
+    {% endfor %}
+  </div>
+</section>
