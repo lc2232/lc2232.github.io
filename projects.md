@@ -36,4 +36,30 @@ A selection of personal and professional projects I've worked on. Find all my pu
     </div>
   </article>
 
+  <article class="project-card-full">
+    <div class="project-card-header">
+      <span class="project-icon">💰</span>
+      <div class="project-links">
+        <a href="https://github.com/lc2232/fintrack" target="_blank" rel="noopener" class="project-link-btn">GitHub →</a>
+      </div>
+    </div>
+    <h2>Fintrack</h2>
+    <p>An investment dashboard that performs meta analysis on Fund/ETF documentation and aggregates the data into a user friendly platform.</p>
+    <h3>Highlights</h3>
+    <ul>
+      <li>Deployed to AWS</li>
+      <li>Microservices architecture</li>
+      <li>Docker</li>
+      <li>Terraform</li>
+      <li>LLM extraction pipeline</li>
+    </ul>
+    <div class="project-tags">
+      <span class="tag">Python</span>
+      <span class="tag">AWS</span>
+      <span class="tag">Terraform</span>
+      <span class="tag">Docker</span>
+      <span class="tag">LLM</span>
+    </div>
+  </article>
+
 </div>
