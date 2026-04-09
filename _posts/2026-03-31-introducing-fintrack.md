@@ -6,6 +6,8 @@ tags: [project]
 excerpt: "Introducing Fintrack - An investment dashboard that performs meta analysis on Fund/ETF documentation and aggregates the data into a user friendly platform."
 ---
 
+Link to source code - [lc2232/fintrack](https://github.com/lc2232/fintrack)
+
 # The Problem
 
 Having always been someone with an interest in finance and technology, I've often found it difficult to get a clear picture of what I'm actually investing in. This is especially the case when investing in financial products such as funds and ETFs to diversify against the market and reduce risk in a portfolio.
